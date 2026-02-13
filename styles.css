@@ -1,0 +1,46 @@
+.product-card {
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 16px;
+  border-radius: 12px;
+  background: #222222;
+  color: #ffffff;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.product-card--featured {
+  border: 2px solid #e67e22;
+}
+.product-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+.product-card__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.product-card__description {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  color: white;
+}
+.product-card__button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+.product-card__button:hover {
+  background-color: rgb(34.6744769874, 130.9924686192, 195.5255230126);
+}
+
+/*# sourceMappingURL=styles.css.map */

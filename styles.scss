@@ -1,0 +1,62 @@
+// Переменные
+$primary-color: #3498db;
+$accent-color: #e67e22;
+$font-base: "Segoe UI", system-ui, -apple-system, sans-serif;
+$border-radius-base: 12px;
+
+// Миксин для кнопки
+@mixin button-base($bg-color) {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: $bg-color;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($bg-color, 8%);
+  }
+}
+
+// Карточка товара
+.product-card {
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 16px;
+  border-radius: $border-radius-base;
+  background: #222222;
+  color: #ffffff;
+  font-family: $font-base;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+
+  &--featured {
+    border: 2px solid $accent-color;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-base;
+    margin-bottom: 12px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    color: lighten(#ffffff, 10%);
+  }
+
+  &__button {
+    @include button-base($primary-color);
+  }
+}
