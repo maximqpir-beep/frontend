@@ -1,0 +1,63 @@
+// ========== ПЕРЕМЕННЫЕ ==========
+$primary-color: #3498db;       // основной цвет (кнопка, акценты)
+$font-stack: 'Arial', sans-serif;  // шрифт по умолчанию
+$border-radius: 8px;            // радиус скругления
+
+// ========== МИКСИН ==========
+// Миксин для создания тени и плавного перехода
+@mixin card-hover-effect($scale: 1.02, $shadow: 0 8px 16px rgba(0,0,0,0.2)) {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: scale($scale);
+        box-shadow: $shadow;
+    }
+}
+
+// ========== СТИЛИ КАРТОЧКИ (ВЛОЖЕННОСТЬ) ==========
+.product-card {
+    max-width: 300px;
+    border: 1px solid #eee;
+    border-radius: $border-radius;
+    overflow: hidden;
+    font-family: $font-stack;
+    background: #fff;
+    margin: 20px auto;
+    
+    // применяем миксин
+    @include card-hover-effect;
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin: 16px 16px 8px;
+        color: #333;
+    }
+
+    &__description {
+        font-size: 1rem;
+        margin: 0 16px 16px;
+        color: #666;
+        line-height: 1.4;
+    }
+
+    &__button {
+        display: inline-block;
+        margin: 0 16px 20px;
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: #fff;
+        text-decoration: none;
+        border-radius: $border-radius;
+        font-weight: bold;
+        
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
