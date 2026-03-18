@@ -1,0 +1,20 @@
+{
+  "name": "pr7-12-fullstack",
+  "version": "1.0.0",
+  "description": "Полный проект: bcrypt + JWT + refresh + RBAC + React",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^3.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
